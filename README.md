@@ -1,5 +1,5 @@
 # Lock_Mechanisms_DBMS
-- Hi! This is my project in Database Management System subject.
+Hi! This is my project in Database Management System subject.
 - This project uses a real-world case study to demonstrate transaction management and lock mechanisms in SQL Server to resolve concurrent data access conflicts. 
 - The project will also discover how deadlock was recognized in SQL Server.
 
