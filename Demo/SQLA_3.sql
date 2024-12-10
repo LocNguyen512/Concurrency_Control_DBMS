@@ -26,7 +26,7 @@ where room_no = '103'
 --Nếu khách hàng A hủy giao dịch, roll back
 ROLLBACK 
 -- Nếu khách hàng A hoàn tất giao dịch, commit
-COMMIT;
+--COMMIT;
 
 
 
