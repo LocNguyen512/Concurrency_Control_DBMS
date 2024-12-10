@@ -1,4 +1,4 @@
-﻿
+
 use QLDPKS
 go
 
@@ -8,7 +8,7 @@ BEGIN TRANSACTION;
 
 -- Khách hàng A đọc trạng thái phòng 103
 SELECT *
-FROM Room WITH (ROWLOCK) -- Đặt share lock
+FROM Room 
 WHERE room_no = '103';
 
 --Khách hàng A tiến hành đặt phòng 103
@@ -26,7 +26,7 @@ where room_no = '103'
 --Nếu khách hàng A hủy giao dịch, roll back
 ROLLBACK 
 -- Nếu khách hàng A hoàn tất giao dịch, commit
---COMMIT;
+COMMIT;
 
 
 
