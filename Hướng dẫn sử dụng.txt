@@ -1,0 +1,7 @@
+Hướng dẫn sử dụng folder Script
+Bước 1: 
+- Chạy file CreateDatabase.sql trên Microsoft Sql Server Management Studio để tạo database, kèm dữ liệu
+Bước 2: 
+- Chạy song song file UnRepeatableRead_A.sql và UnRepeatableRead_B.sql theo từng bước như báo cáo, hai file trên thể hiện cho hai giao tác của trường hợp 1
+- Chạy song song file LostUpdate_A.sql và LostUpdate_B.sql theo từng bước như báo cáo, hai file trên thể hiện cho hai giao tác của trường hợp 2
+- Chạy song song file DirtyRead_A và DirtyRead_B theo từng bước như báo cáo, hai file trên thể hiện cho hai giao tác của trường hợp 3

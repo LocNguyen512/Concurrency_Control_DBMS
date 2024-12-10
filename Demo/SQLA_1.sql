@@ -28,10 +28,7 @@ BEGIN
 	WHERE id = 2
     PRINT N'Khách hàng A đã đặt buffet thành công.';
 END
-ELSE
-BEGIN
-    PRINT N'Không đủ số lượng buffet cho khách hàng A.';
-END;
+
 
 -- Cam kết giao dịch
 COMMIT TRANSACTION;

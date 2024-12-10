@@ -106,10 +106,10 @@ INSERT INTO Roles (rolename) VALUES
 
 
 INSERT INTO Users (fullname, birthday, gender, email, phone_number, address, role_id) VALUES
-('Nguyễn Văn A', '1990-01-01', 'Nam', 'nguyenvana@example.com', '0123456789', 'Hà Nội', 3), -- Customer
-('Trần Thị B', '1995-05-10', 'Nữ', 'tranthib@example.com', '0987654321', 'Hồ Chí Minh', 3), -- Customer
-('Lê Văn C', '1992-03-15', 'Nam', 'levanc@example.com', '0123456780', 'Đà Nẵng', 2),       -- Staff
-('Phạm Thị D', '1997-07-20', 'Nữ', 'phamthid@example.com', '0912345678', 'Huế', 1);        -- Admin
+(N'Nguyễn Văn A', '1990-01-01', N'Nam', 'nguyenvana@example.com', '0123456789', N'Hà Nội', 3), -- Customer
+(N'Trần Thị B', '1995-05-10', N'Nữ', 'tranthib@example.com', '0987654321', N'Hồ Chí Minh', 3), -- Customer
+(N'Lê Văn C', '1992-03-15', N'Nam', 'levanc@example.com', '0123456780', N'Đà Nẵng', 2),       -- Staff
+(N'Phạm Thị D', '1997-07-20', N'Nữ', 'phamthid@example.com', '0912345678', N'Huế', 1);        -- Admin
 
 
 INSERT INTO Room (room_no, type, max_num, price, status)
@@ -127,10 +127,9 @@ INSERT INTO Category (name) VALUES
 
 -- Chèn dữ liệu mẫu vào Product với Category ID tương ứng
 INSERT INTO Product (category_id, title, thumbnail, description, price, amount) VALUES
-(1, 'Buffet Tối Đặc Biệt', NULL, 'Buffet hải sản cao cấp', 500000, 20), -- Buffet
-(1, 'Buffet Trưa Hấp Dẫn', NULL, 'Buffet trưa ngon miệng', 300000, 15), -- Buffet
-(2, 'Đồ uống không cồn', NULL, 'Các loại nước giải khát', 20000, 50),   -- Beverage
-(3, 'Dọn phòng cao cấp', NULL, 'Dịch vụ dọn phòng sang trọng', 100000, 10); -- Room Service
-
+(1, N'Buffet Trưa Hấp Dẫn', NULL, N'Buffet trưa ngon miệng', 300000, 15), -- Buffet
+(1, N'Buffet Tối Đặc Biệt', NULL, N'Buffet hải sản cao cấp', 500000, 1), -- Buffet
+(2, N'Đồ uống không cồn', NULL, N'Các loại nước giải khát', 20000, 50),   -- Beverage
+(3, N'Dọn phòng cao cấp', NULL, N'Dịch vụ dọn phòng sang trọng', 100000, 10); -- Room Service
 
 
