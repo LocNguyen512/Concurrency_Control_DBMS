@@ -1,4 +1,4 @@
-﻿use QLDPKS
+use QLDPKS
 go
 
 -- Giao dịch của khách hàng B
