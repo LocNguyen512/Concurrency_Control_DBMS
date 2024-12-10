@@ -98,14 +98,39 @@ create table Services (
 go
 
 
-INSERT INTO Room (room_no, status)
-VALUES 
-    ('101', 'Trống'),  -- Phòng 101 là trống
-    ('102', 'Đã đặt'),  -- Phòng 102 đã được đặt
-    ('103', 'Trống'),  -- Phòng 103 là trống
-    ('104', 'Đã đặt');  -- Phòng 104 đã được đặt
-DELETE from Room;
--- Dữ liệu ban đầu của bảng Room
+
+INSERT INTO Roles (rolename) VALUES
+('Admin'),
+('Staff'),
+('Customer');
+
+
+INSERT INTO Users (fullname, birthday, gender, email, phone_number, address, role_id) VALUES
+('Nguyễn Văn A', '1990-01-01', 'Nam', 'nguyenvana@example.com', '0123456789', 'Hà Nội', 3), -- Customer
+('Trần Thị B', '1995-05-10', 'Nữ', 'tranthib@example.com', '0987654321', 'Hồ Chí Minh', 3), -- Customer
+('Lê Văn C', '1992-03-15', 'Nam', 'levanc@example.com', '0123456780', 'Đà Nẵng', 2),       -- Staff
+('Phạm Thị D', '1997-07-20', 'Nữ', 'phamthid@example.com', '0912345678', 'Huế', 1);        -- Admin
+
+
 INSERT INTO Room (room_no, type, max_num, price, status)
 VALUES
-('Deluxe101', 'Deluxe', 10, 1000, 'Trống');
+    ('101', 'Deluxe', 2, 1500000, 'Trống'),        -- Phòng 101 là Deluxe và trống
+    ('102', 'Standard', 2, 1000000, 'Đã đặt'),    -- Phòng 102 là Standard và đã đặt
+    ('103', 'Suite', 4, 2500000, 'Trống'),        -- Phòng 103 là Suite và trống
+    ('104', 'Deluxe', 2, 1500000, 'Đã đặt'),      -- Phòng 104 là Deluxe và đã đặt
+    ('106', 'Suite', 4, 2500000, 'Trống');       -- Phòng 106 là Suite và trống
+
+INSERT INTO Category (name) VALUES
+('Buffet'),
+('Beverage'),
+('Room Service');
+
+-- Chèn dữ liệu mẫu vào Product với Category ID tương ứng
+INSERT INTO Product (category_id, title, thumbnail, description, price, amount) VALUES
+(1, 'Buffet Tối Đặc Biệt', NULL, 'Buffet hải sản cao cấp', 500000, 20), -- Buffet
+(1, 'Buffet Trưa Hấp Dẫn', NULL, 'Buffet trưa ngon miệng', 300000, 15), -- Buffet
+(2, 'Đồ uống không cồn', NULL, 'Các loại nước giải khát', 20000, 50),   -- Beverage
+(3, 'Dọn phòng cao cấp', NULL, 'Dịch vụ dọn phòng sang trọng', 100000, 10); -- Room Service
+
+
+
